@@ -19,13 +19,19 @@ public class UserDAO
 		{
 			// Creating a statement using connection object
 			PreparedStatement preparedStatement = connection.prepareStatement(INSER_USER_SQL);
+			preparedStatement.setString(1, employee.getFirstName());
+			preparedStatement.setString(2, employee.getLastName());
+			preparedStatement.setString(3, employee.getUsername());
+			preparedStatement.setString(4, employee.getPassword());
+			
+			System.out.println(preparedStatement);
+			
+			result = preparedStatement.executeUpdate();
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
-		}
-		
-		
-		return 0;
+			JDBCUtils.printSQLException(e);
+		}		
+		return result;
 	}
 }
