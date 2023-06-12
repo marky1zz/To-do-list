@@ -18,9 +18,10 @@ public class JDBCUtils
 		
 		try 
 		{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+            
             connection = DriverManager.getConnection(url, name, password);
-        } 
+        }
 		catch (SQLException e) 
 		{
             e.printStackTrace();
@@ -28,6 +29,7 @@ public class JDBCUtils
 		catch (ClassNotFoundException e) 
 		{
             e.printStackTrace();
+            e.getCause();
         }
 		
 		return connection;

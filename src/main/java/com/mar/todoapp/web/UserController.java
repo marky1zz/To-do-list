@@ -37,7 +37,7 @@ public class UserController extends HttpServlet
 	{
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
-		String userName = request.getParameter("userName");
+		String userName = request.getParameter("username");
 		String password = request.getParameter("password");
 		
 		User employee = new User();
