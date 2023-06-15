@@ -87,7 +87,7 @@ public class Todo
 		this.targetDate = targetDate;
 	}
 	
-	public boolean isStatus() 
+	public boolean getStatus() 
 	{
 		return status;
 	}

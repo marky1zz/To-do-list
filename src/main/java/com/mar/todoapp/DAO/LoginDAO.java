@@ -14,7 +14,7 @@ public class LoginDAO
 	{
 		boolean status = false;
 		
-		Class.forName("com.mysql.cj.jdbc.Driver");
+		//Class.forName("com.mysql.cj.jdbc.Driver");
 		
 		try (Connection connection = JDBCUtils.getConnection())
 		{

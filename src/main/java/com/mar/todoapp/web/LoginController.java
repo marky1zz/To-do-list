@@ -48,14 +48,14 @@ public class LoginController extends HttpServlet
 		{
 			if (loginDAO.validate(loginBean))
 			{
-				RequestDispatcher dispatcher = request.getRequestDispatcher("todo/todo-list.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("list");
 				dispatcher.forward(request, response);
 			}
 			else
 			{
 				HttpSession session = request.getSession();
 				// session.setAttribute("user", username);
-				response.sendRedirect("login/login.jsp");
+				//response.sendRedirect("login/login.jsp");
 			}
 		}
 		catch (Exception e)
